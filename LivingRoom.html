@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon</title>
+</head>
+<body>
+    <img src="./img/LivingRoomNuitInfo.png" usemap="#image-map">
+
+    <map name="image-map">
+        <area title="Pièce Suivante" href="#" coords="2200,739,2323,868" shape="rect">
+        <area title="Pièce Précédente" href="#" coords="215,863,93,716" shape="rect">
+        <area onclick="playAmongUsAudio('./sounds/amogus.mp3');" coords="1510,1268,1585,1351" shape="rect">
+    </map>
+</body>
+</html>
+
+<script>
+    function playAmongUsAudio(url){
+        new Audio(url).play();
+    }
+</script>
