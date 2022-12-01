@@ -3,11 +3,6 @@
     src: url();
 }
 
-@font-face {
-    font-family: "Nerko One";
-    src: url();
-}
-
 body{
     margin: 0;
     padding: 0;
