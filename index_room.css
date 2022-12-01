@@ -2,3 +2,29 @@
     font-family: "Nerko One";
     src: url();
 }
+
+@font-face {
+    font-family: "Nerko One";
+    src: url();
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    background-color: azure;
+    border-radius: 5%;
+}
+
+nav a{
+
+}
+
+
