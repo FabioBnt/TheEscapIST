@@ -1,0 +1,153 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body onload="window.scrollTo(0,1);">
+        
+<div id="image">
+<img src="images/bedroom.png" width="auto" height="auto" usemap="#image-map">
+
+<map name="image-map">
+    <area  onclick="afficheMessage('Ah the bookshelf i put the book that the doctor recommended me yesterday that explains the sikness should i <a href=\'javascript:showbook();\'>read it ?</a>');" coords="11,571,124,67" shape="rect">
+    <area onclick="showConfirmBox()" coords="738,470,983,104" shape="rect">
+</map>
+</div>
+<div id="instructions">
+</div>
+<script src="js/instructions.js"></script>
+<script>afficheMessage("Bonjour, c'est moi x, j'ai 20 voici mon chambre. Yesterday i was digonased with HIV. I am afraid, would i ever be able to live my life normally like before ... i need to undertand more about it would you help me learn more so i can feel at ease getting out of my room? ");</script>
+
+<!-- Trigger/Open The Modal 
+<button id="myBtn">Open Modal</button>-->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <a href="javascript:hides();"><span class="close">&times;</span></a>
+    <p>
+        Chiffres clés en France : les données en 2020
+        Chaque année à l’approche du 1er décembre, journée mondiale de lutte contre le sida, Santé publique France publie les chiffres des nouvelles contaminations par le VIH et des IST. 
+        <br/>
+        VIH signifie Virus de l'Immunodéficience Humaine Lorsqu'une personne est infectée, le VIH attaque progressivement les CD4 (ou T4) c'est-à-dire certaines cellules qui coordonnent l'immunité (c'est-à-dire les défenses de l'organisme contre les microbes.
+        <br/>
+        Une fois infecté, l’organisme ne peut pas éliminer complètement le VIH. Cependant le VIH met en général plusieurs années avant de détruire les défenses immunitaires. On ne parle de SIDA que lorsqu’une personne développe une maladie opportuniste.
+
+Quand une personne a le SIDA c’est qu’elle est déjà forcément infectée par le VIH. Mais toutes les personnes infectées par le VIH ne développent pas forcément le SIDA (voir ci-dessus). 
+<br/>
+Les traitements actuels contre le VIH ont plusieurs objectifs :
+
+empêcher que l’infection par le VIH évolue vers le SIDA,
+soigner les personnes qui ont développé le SIDA,
+empêcher la transmission du VIH à une personne qui n'est pas infectée. Cette stratégie s'appelle le TasP. 
+<br/>
+Etre séropositif-ve au VIH signifie qu’on est porteur du virus. Cela ne veut pas dire qu’on est forcément arrivé au stade SIDA, ni même qu'on y sera un jour.
+
+Seul un test de dépistage permet de savoir si on est ou non séropositif-ve au VIH. 
+<br/>
+J’ai entendu dire qu'une personne séropositive avait des taches sur la peau et qu’elle maigrissait. C'est vrai ?
+
+Non. On peut être séropositif-ve pendant des années tout en se sentant en très bonne santé.
+
+Le fait d’être infecté-e par le VIH ou d’avoir le SIDA ne se voit pas en dehors d’examens spécifiques. 
+
+    </p>
+  </div>
+
+</div>
+
+<!-- The Modal -->
+<div id="myModal1" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <a href="javascript:hides();"><span class="close">&times;</span></a>
+        <h1>Quiz</h1>
+        <h2>JavaScript is ______ Language.</h2><br>
+        <form >
+            <input type="radio" name="choice" value="Scripting"> Scripting
+            <input type="radio" name="choice" value="Programming"> Programming
+            <input type="radio" name="choice" value="Application"> Application
+            <input type="radio" name="choice" value="None of These"> None of These
+        </form>
+        <button onclick="submitAnswer()">Submit Answer</button>
+    </div>
+</div>
+<div class="overlay" id="overlay" hidden>
+    <div class="confirm-box">
+      <div onclick="closeConfirmBox()" class="close">&#10006;</div>
+      <h2>Get out from the room</h2>
+      <p>I am to scared to getout the room without knowing much, I can always search for more informations in the room, do you think i can solve all of this quiz questions?</p>
+      <button onclick="isConfirm(true)">Yes</button>
+      <button onclick="isConfirm(false)">No</button>
+    </div>
+  </div>
+  <script>
+  function showConfirmBox() {
+    document.getElementById("overlay").hidden = false;
+  }
+  function closeConfirmBox() {
+    document.getElementById("overlay").hidden = true;
+  }
+
+  function isConfirm(answer) {
+    if (showquestion()) {
+      alert("Answer is yes");
+    } else {
+        afficheMessage('I am sure I can find more informations in this room');
+    }
+    closeConfirmBox();
+  }
+</script>
+<script>
+    var modal;
+
+
+// When the user clicks on the button, open the modal
+function showbook() {
+    modal = document.getElementById("myModal");
+  modal.style.display = "block";
+}
+function showquestion() {
+    modal = document.getElementById("myModal1");
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+function hides() {
+  modal.style.display = "none";
+  
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+function submitAnswer() {
+
+  var radios = document.getElementsByName('choice');
+  var val= "";
+  for (var i = 0, length = radios.length; i < length; i++) {
+      if (radios[i].checked) {
+         val = radios[i].value; 
+         break;
+       }
+  }
+  
+  if (val == "" ) {
+    alert('please select choice answer');
+  } else if ( val == "Scripting" ) {
+    alert('Answer is correct !');
+    window.location.href = "./LivingRoom.html";
+  } else {
+    afficheMessage('I didn\'t have got it right ... I am sure I can find more informations in this room');
+  }
+}
+
+</script>
