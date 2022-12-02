@@ -20,6 +20,11 @@ img{
     object-fit: fill;
 }
 
+.close{
+    font-size: 45px;
+    font-weight: 600;
+}
+
 
 #popup{
     position: fixed;
