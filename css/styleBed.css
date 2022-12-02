@@ -1,0 +1,116 @@
+#image{
+max-height: 552.396px;
+min-height: 552.396px;
+background-color: white;
+text-align: center;
+}
+
+#consignes{
+font-family: sans-serif;
+height : 15%;
+
+text-align: center;
+font-size: 5vh;}
+
+#image img {
+max-height: 90vh;
+min-height: 90vh;
+max-width: 922.021px;
+min-width: 922.021px;
+}
+
+#image area:link {
+cursor : default;
+}
+
+#go, #inline {
+font-family: sans-serif;
+font-size: 3vh;
+overflow:auto;
+background:#E7DAB0;
+padding:20px;
+max-width:80%;
+border-radius:6px;
+margin-left: auto;
+margin-right:auto;
+}
+#inline form input[type=button],#inline form input[type=submit],#inline form input[type=text] {
+font-size: 150%;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+  }
+
+  .confirm-box {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+    text-align: center;
+    background: white;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+  }
+
+  .confirm-box {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    top: 25%;
+    left: 35%;
+    text-align: center;
+    background: white;
+  }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/livingRoom_style.css">
+    <title>Salon</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <img id="livingroom" src="./images/LivingRoomNuitInfo.png" usemap="#image-map" onclick="toggle();">
+            <map name="image-map">
+                <area title="Pièce Suivante" href="./Bathroom.html" coords="878,296,934,346" shape="rect">
+                <area title="Pièce Précédente" href="./Car.php" coords="31,284,91,344" shape="rect">
+                <area onclick="playAmongUsAudio('./sounds/amogus.mp3');" coords="605,507,632,538" shape="rect">
+                <area title="Un peu de culture"  onclick="toggle()" coords="392,203,430,240" shape="rect">
+            </map>
+        </div>
+        <div id="popup">
+            <span>
+                Les infections sexuellement transmissibles (IST), autrefois appelées maladies sexuellement transmissibles (MST), sont des infections pouvant être transmises lors des relations sexuelles, avec ou sans pénétration.
+                Les IST se transmettent principalement par contact sexuel, notamment lors d'un rapport vaginal, anal ou oral. Certaines peuvent aussi se propager par d'autres voies, comme le sang ou les produits sanguins.
+            </span>
+            <button onclick="toggle();" class="close">&times;</button>
+        </div>
+        <div class="inventaire">
+            <ul>
+                <li>i1</li>
+                <li>i1</li>
+                <li>i1</li>
+                <li>i1</li>
+                <li>i1</li>
+                <li>i1</li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script src="./js/LivingRoom.js"></script>
