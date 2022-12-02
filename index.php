@@ -26,7 +26,7 @@
         </div>
     </header>
 
-    <script type="text/javascript" src=".js/konamiCode.js"></script>
+    <script type="text/javascript" src="./js/konamiCode.js"></script>
     <script type="text/javascript" src="./js/home.js"></script>
 
     <div class="corp">
