@@ -15,6 +15,8 @@ let keyCount = 0;
 
 let timerID;
 
+let url = './sounds/success-konami.mp3';
+
 function checkCode(event) {
     console.log(event.keyCode);
     let keyPressed = keys[event.keyCode];
@@ -35,8 +37,13 @@ function checkCode(event) {
 
 function codeActivated(){
     alert("Konami Code Activated ! :D");
+    playSound(url);
 }
 
 function resetKeyState(){
     keyCount = 0;
+}
+
+function playSound(url){
+    new Audio(url).play();
 }
