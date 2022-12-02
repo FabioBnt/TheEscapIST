@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/livingRoom_style.css">
     <title>Salon</title>
 </head>
 <body>
-    <img src="./img/LivingRoomNuitInfo.png" usemap="#image-map">
-
-    <map name="image-map">
-        <area title="Pièce Suivante" href="#" coords="2200,739,2323,868" shape="rect">
-        <area title="Pièce Précédente" href="#" coords="215,863,93,716" shape="rect">
-        <area onclick="playAmongUsAudio('./sounds/amogus.mp3');" coords="1510,1268,1585,1351" shape="rect">
-    </map>
+    <div class="container">
+        <div class="imageContainer">
+            <img src="./img/LivingRoomNuitInfo.png" usemap="#image-map">
+            <map name="image-map">
+                <area title="Pièce Suivante" href="#" coords="2200,739,2323,868" shape="rect">
+                <area title="Pièce Précédente" href="#" coords="215,863,93,716" shape="rect">
+                <area onclick="playAmongUsAudio('./sounds/amogus.mp3');" coords="1510,1268,1585,1351" shape="rect">
+                <area title="Témoignage" href="#" onclick="openPopupTemoignage();" coords="995,515,1065,603" shape="rect">
+            </map>
+        </div>
+        <div class="popup">
+            <span class="popuptext" id="popupStory">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, quo ad ipsa sunt doloribus distinctio fugiat suscipit, quae quod assumenda doloremque, quisquam facere iste. Voluptate modi aliquam reprehenderit tempore vero!</span>
+        </div>
+    </div>
+    
 </body>
 </html>
 
-<script>
-    function playAmongUsAudio(url){
-        new Audio(url).play();
-    }
-</script>
+<script src="./js/LivingRoom.js"></script>
