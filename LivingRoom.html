@@ -9,17 +9,17 @@
 </head>
 <body>
     <div class="container">
-        <div class="imageContainer">
-            <img src="./img/LivingRoomNuitInfo.png" usemap="#image-map">
+        <div class="content">
+            <img id="livingroom" src="./img/LivingRoomNuitInfo.png" usemap="#image-map">
             <map name="image-map">
                 <area title="Pièce Suivante" href="#" coords="2200,739,2323,868" shape="rect">
                 <area title="Pièce Précédente" href="#" coords="215,863,93,716" shape="rect">
                 <area onclick="playAmongUsAudio('./sounds/amogus.mp3');" coords="1510,1268,1585,1351" shape="rect">
-                <area title="Témoignage" href="#" onclick="openPopupTemoignage();" coords="995,515,1065,603" shape="rect">
+                <area title="Témoignage" href="#" onclick="toggle()" coords="995,515,1065,603" shape="rect">
             </map>
         </div>
-        <div class="popup">
-            <span class="popuptext" id="popupStory">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, quo ad ipsa sunt doloribus distinctio fugiat suscipit, quae quod assumenda doloremque, quisquam facere iste. Voluptate modi aliquam reprehenderit tempore vero!</span>
+        <div id="popup">
+            <span>La plupart du temps, on ne se rends pas compte des choses</span>
         </div>
     </div>
     
