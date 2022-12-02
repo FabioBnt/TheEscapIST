@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <a href="./index.php" class="logo"><i class="ri-home-heart-fill"></i><span>Logo</span></a>
+        <a href="./index.php" class="logo"><img src="./img/logo.jpg" alt="Logo" width="250"></a>
         
         <ul class="navbar">
             <li><a href="./index.php">ACCEUIL</a></li>
