@@ -1,14 +1,13 @@
 #image{
 height: 100%;
-background-color: black;
+background-color: white;
 text-align: center;
 }
 
 #consignes{
 font-family: sans-serif;
 height : 15%;
-padding-left: 5%;
-padding-right: 5%;
+
 text-align: center;
 font-size: 5vh;}
 

@@ -11,14 +11,20 @@
 <img src="images/bedroom.png" width="auto" height="auto" usemap="#image-map">
 
 <map name="image-map">
-    <area  onclick="afficheMessage('Ah the bookshelf i put the book that the doctor recommended me yesterday that explains the sikness should i <a href=\'javascript:showbook();\'>read it ?</a>');" coords="11,571,124,67" shape="rect">
-    <area onclick="showConfirmBox()" coords="738,470,983,104" shape="rect">
+    <area  onclick="afficheMessage('Voulez vous lire des trucs interresant <a href=\'javascript:showbook();\'>click ici </a>');" coords="11,571,124,67" shape="rect">
+    <area onclick="showConfirmBox()" coords="738,370,983,104" shape="rect">
+    <area onclick="showPaperBed()" coords="394,360,330,300" shape="rect">
+    <area onclick="showTablet()" coords="730,460,967,502" shape="rect">
+    <area onclick="showQuiz1()" coords="374,460,320,400" shape="rect">
+    <area onclick="showPaperTable()" coords="594,310,690,280" shape="rect">
+    <area onclick="showQuiz2()" coords="550,320,650,339" shape="rect">
+
 </map>
 </div>
 <div id="instructions">
 </div>
 <script src="js/instructions.js"></script>
-<script>afficheMessage("Bonjour, c'est moi x, j'ai 20 voici mon chambre. Yesterday i was digonased with HIV. I am afraid, would i ever be able to live my life normally like before ... i need to undertand more about it would you help me learn more so i can feel at ease getting out of my room? ");</script>
+<script>afficheMessage("Bienvenu dans l’aventure, Vous vous retrouvez dans cet appartement. Votre objectif est de s'échapper. Pour cela vous devez résoudre des quiz et chercher des objets pour trouver un moyen de démarrer la voiture.");</script>
 
 <!-- Trigger/Open The Modal 
 <button id="myBtn">Open Modal</button>-->
@@ -65,26 +71,98 @@ Le fait d’être infecté-e par le VIH ou d’avoir le SIDA ne se voit pas en d
     <!-- Modal content -->
     <div class="modal-content">
         <a href="javascript:hides();"><span class="close">&times;</span></a>
-        <h1>Quiz</h1>
-        <h2>JavaScript is ______ Language.</h2><br>
+        <h2>Ouvrir porte</h2><br>
         <form >
-            <input type="radio" name="choice" value="Scripting"> Scripting
-            <input type="radio" name="choice" value="Programming"> Programming
-            <input type="radio" name="choice" value="Application"> Application
-            <input type="radio" name="choice" value="None of These"> None of These
+            Code = <input id="codet" type="number" name="ans">
         </form>
-        <button onclick="submitAnswer()">Submit Answer</button>
+        <button onclick="submitAnswerDoor()">Submit Answer</button>
     </div>
 </div>
 <div class="overlay" id="overlay" hidden>
     <div class="confirm-box">
       <div onclick="closeConfirmBox()" class="close">&#10006;</div>
-      <h2>Get out from the room</h2>
-      <p>I am to scared to getout the room without knowing much, I can always search for more informations in the room, do you think i can solve all of this quiz questions?</p>
+      <h2>Sortir de la champs</h2>
+      <p>il faut avoir la code secret</p>
       <button onclick="isConfirm(true)">Yes</button>
       <button onclick="isConfirm(false)">No</button>
     </div>
   </div>
+
+<!-- The Modal -->
+<div id="paperBed" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <a href="javascript:hides();"><span class="close">&times;</span></a>
+        <p>
+          Le code de la porte est ……. <br/>
+          l’ordre : <br/>
+          1.Prévention<br/>
+          2.population<br/>
+        </p>
+    </div>
+</div>
+
+<!-- The Modal -->
+<div id="tablet" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+      <a href="javascript:hides();"><span class="close">&times;</span></a>
+      <p>
+        News:
+DÉPISTAGE INSUFFISANT
+En 2021, le dépistage a progressé par rapport à 2020 sans toutefois retrouver le niveau de 2019. Au total, 5,7 millions de sérologies VIH ont été réalisées en 2021, soit 8% de plus qu'en 2020 (5,3 millions). Le nombre d'autotests vendus en pharmacie a été d'environ 65 000 en 2021, soit une hausse de 15% par rapport à 2020. Toutefois les ventes d'auto tests avaient baissé de 30% entre 2019 et 2020. La hausse de 2021 a donc été insuffisante pour retrouver les niveaux de 2019.
+
+      </p>
+  </div>
+</div>
+
+<!-- The Modal -->
+<div id="quiz1" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+      <a href="javascript:hides();"><span class="close">&times;</span></a>
+      <h1>Quiz</h1>
+      <h2>Combien de personnes se sont fait dépister en 2021 ?”</h2><br>
+      <form >
+          <input type="radio" name="choice" value="yes"> 65 000
+          <input type="radio" name="choice" value="no1"> 70 000
+          <input type="radio" name="choice" value="no2"> 90 000
+          <input type="radio" name="choice" value="no3"> 100 000
+      </form>
+      <br/>
+      <button onclick="submitAnswer(5)">Submit Answer</button>
+  </div>
+</div>
+
+<!-- The Modal -->
+<div id="quiz2" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+      <a href="javascript:hides();"><span class="close">&times;</span></a>
+      <h1>Quiz</h1>
+      <h2>Quel est le moyen de contraception le plus utilisé ?”</h2><br>
+      <form>
+          <input type="radio" name="choice" value="no2"> préservatif masculin
+          <input type="radio" name="choice" value="no1"> le sterilet
+          <input type="radio" name="choice" value="yes"> la pillule
+          <input type="radio" name="choice" value="no3"> l'implant
+      </form>
+      <br/>
+      <button onclick="submitAnswer(4)">Submit Answer</button>
+  </div>
+</div>
+
+<!-- The Modal -->
+<div id="paperTable" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+      <a href="javascript:hides();"><span class="close">&times;</span></a>
+      <p>
+        News: Le préservatif est le moyen de contraception le plus utilisé
+      </p>
+  </div>
+</div>
+
   <script>
   function showConfirmBox() {
     document.getElementById("overlay").hidden = false;
@@ -116,6 +194,31 @@ function showquestion() {
   modal.style.display = "block";
 }
 
+function showPaperBed(){
+    modal = document.getElementById("paperBed");
+  modal.style.display = "block";
+}
+
+function showTablet(){
+    modal = document.getElementById("tablet");
+  modal.style.display = "block";
+}
+
+function showQuiz1(){
+    modal = document.getElementById("quiz1");
+  modal.style.display = "block";
+}
+
+function showQuiz2(){
+    modal = document.getElementById("quiz2");
+  modal.style.display = "block";
+}
+
+function showPaperTable(){
+    modal = document.getElementById("paperTable");
+    modal.style.display = "block";
+}
+
 // When the user clicks on <span> (x), close the modal
 function hides() {
   modal.style.display = "none";
@@ -141,13 +244,28 @@ function submitAnswer() {
   }
   
   if (val == "" ) {
-    alert('please select choice answer');
-  } else if ( val == "Scripting" ) {
-    alert('Answer is correct !');
-    window.location.href = "./LivingRoom.html";
+    alert('il faut choissir');
+  } else if ( val == "yes" ) {
+    afficheMessage('Bon reponse :) you got the number '+ arguments[0]);
+    hides();
   } else {
-    afficheMessage('I didn\'t have got it right ... I am sure I can find more informations in this room');
+    afficheMessage('Hmm ... peut etre on peut trouver la solution dans cette salle');
+    hides();
+  }
+
+  
+}
+
+function submitAnswerDoor(){
+  var x = document.getElementById("codet").value;
+  if (x == '54'){
+    afficheMessage('Bon reponse : ) ');
+    window.location.href = "./LivingRoom.html";
+  }
+  else{
+    afficheMessage('Code incorrect ...');
   }
 }
+
 
 </script>
