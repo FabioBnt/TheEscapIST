@@ -33,7 +33,7 @@
         <div>
             <h1>THE ESCAP'IST</h1>
             <p>Pouvez-vous sortir sans attraper d'IST ?</p>
-            <a href="./Bedroom.html" class="button">Boutton</a>
+            <a href="./Bedroom.html" class="button">Relever le défi</a>
         </div>
     </div>
 
