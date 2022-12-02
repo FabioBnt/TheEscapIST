@@ -6,6 +6,6 @@ function playAmongUsAudio(url){
 }
 
 function toggle(){
-    var popup = document.getElementById('popup')
+    let popup = document.getElementById('popup')
     popup.classList.toggle('active')
 }
