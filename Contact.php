@@ -31,7 +31,7 @@
     <div class="corp">
         <div>
             <h1>Contact</h1>
-            <p>Lorem Lorem Lorem Lorem Lorem</p>
+            <p>AL RIYAMI Ismail - MARION Camille - KAYA Baran  BENTAILA Fabio - WATTRE Benjamin - ANRIFOU Amdjad - ASIN Christopher</p>
             
         </div>
     </div>
