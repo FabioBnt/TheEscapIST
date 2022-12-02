@@ -1,84 +1,97 @@
 <!doctype html>
 
 <html lang="fr">
+
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="css/styleBed.css" />
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styleBed.css" />
 </head>
+
 <body onload="window.scrollTo(0,1);">
-        
-<div id="image">
-<img src="images/bedroom.png" width="auto" height="auto" usemap="#image-map">
 
-<map name="image-map">
-    <area  onclick="afficheMessage('Voulez vous lire des trucs interresant <a href=\'javascript:showbook();\'>click ici </a>');" coords="11,571,124,67" shape="rect">
-    <area onclick="showConfirmBox()" coords="738,370,983,104" shape="rect">
-    <area onclick="showPaperBed()" coords="394,360,330,300" shape="rect">
-    <area onclick="showTablet()" coords="730,460,967,502" shape="rect">
-    <area onclick="showQuiz1()" coords="374,460,320,400" shape="rect">
-    <area onclick="showPaperTable()" coords="594,310,690,280" shape="rect">
-    <area onclick="showQuiz2()" coords="550,320,650,350" shape="rect">
+  <div id="image">
+    <img id="imageSrc" src="images/bedroom.png" width="auto" height="auto" usemap="#image-map">
 
-</map>
-</div>
-<div id="instructions">
-</div>
-<script src="js/instructions.js"></script>
-<script>afficheMessage("Bienvenu dans l’aventure, Vous vous retrouvez dans cet appartement. Votre objectif est de s'échapper. Pour cela vous devez résoudre des quiz et chercher des objets pour trouver un moyen de démarrer la voiture.");</script>
 
-<!-- Trigger/Open The Modal 
+
+    <map name="image-map">
+      <area
+        onclick="afficheMessage('Voulez vous lire des trucs interresant <a href=\'javascript:showbook();\'>click ici </a>');"
+        coords="11,571,124,67" shape="rect">
+      <area onclick="showConfirmBox()" coords="738,370,983,104" shape="rect">
+      <area onclick="showPaperBed()" coords="394,360,330,300" shape="rect">
+      <area onclick="showTablet()" coords="730,460,967,502" shape="rect">
+      <area onclick="showQuiz1()" coords="374,460,320,400" shape="rect">
+      <area onclick="showPaperTable()" coords="594,310,690,280" shape="rect">
+      <area onclick="showQuiz2()" coords="550,320,650,350" shape="rect">
+
+    </map>
+  </div>
+  <div id="instructions">
+  </div>
+  <script src="js/instructions.js"></script>
+  <script>afficheMessage("Bienvenu dans l’aventure, Vous vous retrouvez dans cet appartement. Votre objectif est de s'échapper. Pour cela vous devez résoudre des quiz et chercher des objets pour trouver un moyen de démarrer la voiture.");</script>
+
+  <!-- Trigger/Open The Modal 
 <button id="myBtn">Open Modal</button>-->
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <a href="javascript:hides();"><span class="close">&times;</span></a>
-    <p>
-        Chiffres clés en France : les données en 2020
-        Chaque année à l’approche du 1er décembre, journée mondiale de lutte contre le sida, Santé publique France publie les chiffres des nouvelles contaminations par le VIH et des IST. 
-        <br/>
-        VIH signifie Virus de l'Immunodéficience Humaine Lorsqu'une personne est infectée, le VIH attaque progressivement les CD4 (ou T4) c'est-à-dire certaines cellules qui coordonnent l'immunité (c'est-à-dire les défenses de l'organisme contre les microbes.
-        <br/>
-        Une fois infecté, l’organisme ne peut pas éliminer complètement le VIH. Cependant le VIH met en général plusieurs années avant de détruire les défenses immunitaires. On ne parle de SIDA que lorsqu’une personne développe une maladie opportuniste.
-
-Quand une personne a le SIDA c’est qu’elle est déjà forcément infectée par le VIH. Mais toutes les personnes infectées par le VIH ne développent pas forcément le SIDA (voir ci-dessus). 
-<br/>
-Les traitements actuels contre le VIH ont plusieurs objectifs :
-
-empêcher que l’infection par le VIH évolue vers le SIDA,
-soigner les personnes qui ont développé le SIDA,
-empêcher la transmission du VIH à une personne qui n'est pas infectée. Cette stratégie s'appelle le TasP. 
-<br/>
-Etre séropositif-ve au VIH signifie qu’on est porteur du virus. Cela ne veut pas dire qu’on est forcément arrivé au stade SIDA, ni même qu'on y sera un jour.
-
-Seul un test de dépistage permet de savoir si on est ou non séropositif-ve au VIH. 
-<br/>
-J’ai entendu dire qu'une personne séropositive avait des taches sur la peau et qu’elle maigrissait. C'est vrai ?
-
-Non. On peut être séropositif-ve pendant des années tout en se sentant en très bonne santé.
-
-Le fait d’être infecté-e par le VIH ou d’avoir le SIDA ne se voit pas en dehors d’examens spécifiques. 
-
-    </p>
-  </div>
-
-</div>
-
-<!-- The Modal -->
-<div id="myModal1" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
-        <a href="javascript:hides();"><span class="close">&times;</span></a>
-        <h2>Ouvrir porte</h2><br>
-        <form >
-            Code = <input id="codet" type="number" name="ans">
-        </form>
-        <button onclick="submitAnswerDoor()">Submit Answer</button>
+      <a href="javascript:hides();"><span class="close">&times;</span></a>
+      <p>
+        Chiffres clés en France : les données en 2020
+        Chaque année à l’approche du 1er décembre, journée mondiale de lutte contre le sida, Santé publique France
+        publie les chiffres des nouvelles contaminations par le VIH et des IST.
+        <br />
+        VIH signifie Virus de l'Immunodéficience Humaine Lorsqu'une personne est infectée, le VIH attaque
+        progressivement les CD4 (ou T4) c'est-à-dire certaines cellules qui coordonnent l'immunité (c'est-à-dire les
+        défenses de l'organisme contre les microbes.
+        <br />
+        Une fois infecté, l’organisme ne peut pas éliminer complètement le VIH. Cependant le VIH met en général
+        plusieurs années avant de détruire les défenses immunitaires. On ne parle de SIDA que lorsqu’une personne
+        développe une maladie opportuniste.
+
+        Quand une personne a le SIDA c’est qu’elle est déjà forcément infectée par le VIH. Mais toutes les personnes
+        infectées par le VIH ne développent pas forcément le SIDA (voir ci-dessus).
+        <br />
+        Les traitements actuels contre le VIH ont plusieurs objectifs :
+
+        empêcher que l’infection par le VIH évolue vers le SIDA,
+        soigner les personnes qui ont développé le SIDA,
+        empêcher la transmission du VIH à une personne qui n'est pas infectée. Cette stratégie s'appelle le TasP.
+        <br />
+        Etre séropositif-ve au VIH signifie qu’on est porteur du virus. Cela ne veut pas dire qu’on est forcément arrivé
+        au stade SIDA, ni même qu'on y sera un jour.
+
+        Seul un test de dépistage permet de savoir si on est ou non séropositif-ve au VIH.
+        <br />
+        J’ai entendu dire qu'une personne séropositive avait des taches sur la peau et qu’elle maigrissait. C'est vrai ?
+
+        Non. On peut être séropositif-ve pendant des années tout en se sentant en très bonne santé.
+
+        Le fait d’être infecté-e par le VIH ou d’avoir le SIDA ne se voit pas en dehors d’examens spécifiques.
+
+      </p>
     </div>
-</div>
-<div class="overlay" id="overlay" hidden>
+
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal1" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <a href="javascript:hides();"><span class="close">&times;</span></a>
+      <h2>Ouvrir porte</h2><br>
+      <form>
+        Code = <input id="codet" type="number" name="ans">
+      </form>
+      <button onclick="submitAnswerDoor()">Submit Answer</button>
+    </div>
+  </div>
+  <div class="overlay" id="overlay" hidden>
     <div class="confirm-box">
       <div onclick="closeConfirmBox()" class="close">&#10006;</div>
       <h2>Sortir de la champs</h2>
@@ -88,184 +101,188 @@ Le fait d’être infecté-e par le VIH ou d’avoir le SIDA ne se voit pas en d
     </div>
   </div>
 
-<!-- The Modal -->
-<div id="paperBed" class="modal">
+  <!-- The Modal -->
+  <div id="paperBed" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
-        <a href="javascript:hides();"><span class="close">&times;</span></a>
-        <p>
-          Le code de la porte est ……. <br/>
-          l’ordre : <br/>
-          1.Prévention<br/>
-          2.population<br/>
-        </p>
+      <a href="javascript:hides();"><span class="close">&times;</span></a>
+      <p>
+        Le code de la porte est ……. <br />
+        l’ordre : <br />
+        1.Prévention<br />
+        2.population<br />
+      </p>
     </div>
-</div>
+  </div>
 
-<!-- The Modal -->
-<div id="tablet" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
+  <!-- The Modal -->
+  <div id="tablet" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
       <a href="javascript:hides();"><span class="close">&times;</span></a>
       <p>
         News:
-DÉPISTAGE INSUFFISANT
-En 2021, le dépistage a progressé par rapport à 2020 sans toutefois retrouver le niveau de 2019. Au total, 5,7 millions de sérologies VIH ont été réalisées en 2021, soit 8% de plus qu'en 2020 (5,3 millions). Le nombre d'autotests vendus en pharmacie a été d'environ 65 000 en 2021, soit une hausse de 15% par rapport à 2020. Toutefois les ventes d'auto tests avaient baissé de 30% entre 2019 et 2020. La hausse de 2021 a donc été insuffisante pour retrouver les niveaux de 2019.
+        DÉPISTAGE INSUFFISANT
+        En 2021, le dépistage a progressé par rapport à 2020 sans toutefois retrouver le niveau de 2019. Au total, 5,7
+        millions de sérologies VIH ont été réalisées en 2021, soit 8% de plus qu'en 2020 (5,3 millions). Le nombre
+        d'autotests vendus en pharmacie a été d'environ 65 000 en 2021, soit une hausse de 15% par rapport à 2020.
+        Toutefois les ventes d'auto tests avaient baissé de 30% entre 2019 et 2020. La hausse de 2021 a donc été
+        insuffisante pour retrouver les niveaux de 2019.
 
       </p>
+    </div>
   </div>
-</div>
 
-<!-- The Modal -->
-<div id="quiz1" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
+  <!-- The Modal -->
+  <div id="quiz1" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
       <a href="javascript:hides();"><span class="close">&times;</span></a>
       <h1>Quiz</h1>
       <h2>Combien de personnes se sont fait dépister en 2021 ?”</h2><br>
-      <form >
-          <input type="radio" name="choice" value="yes"> 65 000
-          <input type="radio" name="choice" value="no1"> 70 000
-          <input type="radio" name="choice" value="no2"> 90 000
-          <input type="radio" name="choice" value="no3"> 100 000
+      <form>
+        <input type="radio" name="choice" value="yes"> 65 000
+        <input type="radio" name="choice" value="no1"> 70 000
+        <input type="radio" name="choice" value="no2"> 90 000
+        <input type="radio" name="choice" value="no3"> 100 000
       </form>
-      <br/>
+      <br />
       <button onclick="submitAnswer(5)">Submit Answer</button>
+    </div>
   </div>
-</div>
 
-<!-- The Modal -->
-<div id="quiz2" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
+  <!-- The Modal -->
+  <div id="quiz2" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
       <a href="javascript:hides();"><span class="close">&times;</span></a>
       <h1>Quiz</h1>
       <h2>Quel est le moyen de contraception le plus utilisé ?”</h2><br>
       <form>
-          <input type="radio" name="choice" value="no2"> préservatif masculin
-          <input type="radio" name="choice" value="no1"> le sterilet
-          <input type="radio" name="choice" value="yes"> la pillule
-          <input type="radio" name="choice" value="no3"> l'implant
+        <input type="radio" name="choice" value="no2"> préservatif masculin
+        <input type="radio" name="choice" value="no1"> le sterilet
+        <input type="radio" name="choice" value="yes"> la pillule
+        <input type="radio" name="choice" value="no3"> l'implant
       </form>
-      <br/>
+      <br />
       <button onclick="submitAnswer(4)">Submit Answer</button>
+    </div>
   </div>
-</div>
 
-<!-- The Modal -->
-<div id="paperTable" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
+  <!-- The Modal -->
+  <div id="paperTable" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
       <a href="javascript:hides();"><span class="close">&times;</span></a>
       <p>
         News: Le préservatif est le moyen de contraception le plus utilisé
       </p>
+    </div>
   </div>
-</div>
 
   <script>
-  function showConfirmBox() {
-    document.getElementById("overlay").hidden = false;
-  }
-  function closeConfirmBox() {
-    document.getElementById("overlay").hidden = true;
-  }
-
-  function isConfirm(answer) {
-    if (showquestion()) {
-      alert("Answer is yes");
-    } else {
-        afficheMessage('I am sure I can find more informations in this room');
+    function showConfirmBox() {
+      document.getElementById("overlay").hidden = false;
     }
-    closeConfirmBox();
-  }
-</script>
-<script>
+    function closeConfirmBox() {
+      document.getElementById("overlay").hidden = true;
+    }
+
+    function isConfirm(answer) {
+      if (showquestion()) {
+        alert("Answer is yes");
+      } else {
+        afficheMessage('I am sure I can find more informations in this room');
+      }
+      closeConfirmBox();
+    }
+  </script>
+  <script>
     var modal;
 
 
-// When the user clicks on the button, open the modal
-function showbook() {
-    modal = document.getElementById("myModal");
-  modal.style.display = "block";
-}
-function showquestion() {
-    modal = document.getElementById("myModal1");
-  modal.style.display = "block";
-}
+    // When the user clicks on the button, open the modal
+    function showbook() {
+      modal = document.getElementById("myModal");
+      modal.style.display = "block";
+    }
+    function showquestion() {
+      modal = document.getElementById("myModal1");
+      modal.style.display = "block";
+    }
 
-function showPaperBed(){
-    modal = document.getElementById("paperBed");
-  modal.style.display = "block";
-}
+    function showPaperBed() {
+      modal = document.getElementById("paperBed");
+      modal.style.display = "block";
+    }
 
-function showTablet(){
-    modal = document.getElementById("tablet");
-  modal.style.display = "block";
-}
+    function showTablet() {
+      modal = document.getElementById("tablet");
+      modal.style.display = "block";
+    }
 
-function showQuiz1(){
-    modal = document.getElementById("quiz1");
-  modal.style.display = "block";
-}
+    function showQuiz1() {
+      modal = document.getElementById("quiz1");
+      modal.style.display = "block";
+    }
 
-function showQuiz2(){
-    modal = document.getElementById("quiz2");
-  modal.style.display = "block";
-}
+    function showQuiz2() {
+      modal = document.getElementById("quiz2");
+      modal.style.display = "block";
+    }
 
-function showPaperTable(){
-    modal = document.getElementById("paperTable");
-    modal.style.display = "block";
-}
+    function showPaperTable() {
+      modal = document.getElementById("paperTable");
+      modal.style.display = "block";
+    }
 
-// When the user clicks on <span> (x), close the modal
-function hides() {
-  modal.style.display = "none";
-  
-}
+    // When the user clicks on <span> (x), close the modal
+    function hides() {
+      modal.style.display = "none";
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+    }
 
-function submitAnswer() {
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
 
-  var radios = document.getElementsByName('choice');
-  var val= "";
-  for (var i = 0, length = radios.length; i < length; i++) {
-      if (radios[i].checked) {
-         val = radios[i].value; 
-         break;
-       }
-  }
-  
-  if (val == "" ) {
-    alert('il faut choissir');
-  } else if ( val == "yes" ) {
-    afficheMessage('Bon reponse :) you got the number '+ arguments[0]);
-    hides();
-  } else {
-    afficheMessage('Hmm ... peut etre on peut trouver la solution dans cette salle');
-    hides();
-  }
+    function submitAnswer() {
 
-  
-}
+      var radios = document.getElementsByName('choice');
+      var val = "";
+      for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+          val = radios[i].value;
+          break;
+        }
+      }
 
-function submitAnswerDoor(){
-  var x = document.getElementById("codet").value;
-  if (x == '54'){
-    afficheMessage('Bon reponse : ) ');
-    window.location.href = "./LivingRoom.html";
-  }
-  else{
-    afficheMessage('Code incorrect ...');
-  }
-}
+      if (val == "") {
+        alert('il faut choissir');
+      } else if (val == "yes") {
+        afficheMessage('Bon reponse :) you got the number ' + arguments[0]);
+        hides();
+      } else {
+        afficheMessage('Hmm ... peut etre on peut trouver la solution dans cette salle');
+        hides();
+      }
 
 
-</script>
+    }
+
+    function submitAnswerDoor() {
+      var x = document.getElementById("codet").value;
+      if (x == '54') {
+        afficheMessage('Bon reponse : ) ');
+        window.location.href = "./LivingRoom.html";
+      }
+      else {
+        afficheMessage('Code incorrect ...');
+      }
+    }
+
+
+  </script>
