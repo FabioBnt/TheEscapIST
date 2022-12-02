@@ -17,7 +17,7 @@
         
         <ul class="navbar">
             <li><a href="./index.php" class="active">ACCEUIL</a></li>
-            <li><a href="./ist-info.php">IST</a></li>
+            <li><a href="https://www.sida-info-service.org/definition-ist/" target="_blank">IST</a></li>
             <li><a href="./contact.php">CONTACT</a></li>
         </ul>
 
