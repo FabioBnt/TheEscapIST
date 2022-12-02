@@ -16,8 +16,8 @@
         <a href="./index.php" class="logo"><i class="ri-home-heart-fill"></i><span>Logo</span></a>
         
         <ul class="navbar">
-            <li><a href="./index.php" class="active">ACCEUIL</a></li>
-            <li><a href="./ist-info.php">IST</a></li>
+            <li><a href="./index.php">ACCEUIL</a></li>
+            <li><a href="./ist-info.php" class="active">IST</a></li>
             <li><a href="./contact.php">CONTACT</a></li>
         </ul>
 
@@ -30,9 +30,8 @@
 
     <div class="corp">
         <div>
-            <h1>THE ESCAP'IST</h1>
-            <p>Pouvez-vous sortir sans attraper d'IST ?</p>
-            <a href="#" class="button">Boutton</a>
+            <h1>IST</h1>
+            <p>Lorem Lorem Lorem Lorem Lorem</p>
         </div>
     </div>
 
