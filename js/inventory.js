@@ -25,10 +25,10 @@ class Inventory {
         return isItemActive(INVENTORIES_ITEMS.CAPOTE);
     }
     setCapoteActive() {
-        add(INVENTORIES_ITEMS.CAPOTE)
+        add(INVENTORIES_ITEMS.CAPOTE);
     }
     gInventaire() {
-        return this.slotInventaire
+        return this.slotInventaire;
     }
 }
 
@@ -38,6 +38,5 @@ const INVENTORIES_ITEMS = {
     DIGUEDENTAIRE: "DIGUEDENTAIRE",
     FLYERSYMPTOMES: "FLYERSYMPTOMES",
     TELECOMMANDE: "TELECOMMANDE",
-    CAPOTE: "CAPOTE",
-    CAPOTE: "CAPOTE",
+    CAPOTE: "CAPOTE"
 }

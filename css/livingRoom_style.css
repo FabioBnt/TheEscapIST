@@ -16,8 +16,8 @@
     padding: 10px;
 }
 
-.container img{
-    width: 100%;
+.container .content img{
+    object-fit: fill;
 }
 
 
